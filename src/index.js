@@ -1,17 +1,17 @@
-export const flat = (data, parentKey) => {
-  return Object.keys(data).reduce((flatten, key) => {
-    const objectKey = parentKey ? `${parentKey}->${key}` : key;
+export const flatten = (data, delimeter = ".", parentKey) => {
+  return Object.keys(data).reduce((flattenedObject, key) => {
+    const objectKey = parentKey ? `${parentKey}${delimeter}${key}` : key;
     const value = data[key];
 
     if (value && typeof value === "object") {
       return {
-        ...flatten,
-        ...flat(value, objectKey),
+        ...flattenedObject,
+        ...flatten(value, delimeter, objectKey),
       };
     }
 
     return {
-      ...flatten,
+      ...flattenedObject,
       [objectKey]: value,
     };
   }, {});
