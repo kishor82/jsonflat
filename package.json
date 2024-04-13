@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kishor82/flatjson.git"
+    "url": "git+https://github.com/kishor82/flatten-this-json.git"
   },
   "keywords": [
     "starwars"
@@ -20,7 +20,7 @@
   "author": "Kishor Rathva",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kishor82/flatjson/issues"
+    "url": "https://github.com/kishor82/flatten-this-json/issues"
   },
-  "homepage": "https://github.com/kishor82/flatjson#readme"
+  "homepage": "https://github.com/kishor82/flatten-this-json#readme"
 }
