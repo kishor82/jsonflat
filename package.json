@@ -1,0 +1,23 @@
+{
+  "name": "flatten-this-json",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript library to flatten nested JSON objects into a single-level structure.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kishor82/flatjson.git"
+  },
+  "keywords": [
+    "starwars"
+  ],
+  "author": "Kishor Rathva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kishor82/flatjson/issues"
+  },
+  "homepage": "https://github.com/kishor82/flatjson#readme"
+}
