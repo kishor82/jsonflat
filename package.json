@@ -15,7 +15,14 @@
     "url": "git+https://github.com/kishor82/flatten-this-json.git"
   },
   "keywords": [
-    "starwars"
+    "flat-json",
+    "json",
+    "flatten",
+    "flattening",
+    "nested",
+    "flat",
+    "unflatten",
+    "unflattening"
   ],
   "author": "Kishor Rathva",
   "license": "MIT",
