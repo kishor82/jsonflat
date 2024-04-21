@@ -8,8 +8,6 @@ import bundleSize from "rollup-plugin-bundle-size";
 import path from "path";
 
 import pkg from "./package.json" assert { type: "json" };
-// const lib = require("./package.json");
-// const lib = {version: 'beta', author: "Kishor RAthva" }
 const outputFileName = "index";
 const name = "index";
 const namedInput = "index.js";
@@ -75,7 +73,6 @@ export default async () => {
       output: {
         file: `dist/esm/${outputFileName}.js`,
         format: "esm",
-        preferConst: true,
         exports: "named",
         banner,
       },
@@ -114,7 +111,6 @@ export default async () => {
       output: {
         file: `dist/node/${name}.cjs`,
         format: "cjs",
-        preferConst: true,
         exports: "default",
         banner,
       },
