@@ -2,8 +2,7 @@
   "name": "flatten-this-json",
   "version": "1.0.0-beta.1",
   "description": "A lightweight JavaScript library to flatten nested JSON objects into a single-level structure.",
-  "main": "lib/index.js",
-  "type": "module",
+  "main": "index.js",
   "exports": {
     ".": {
       "browser": {
@@ -14,12 +13,22 @@
         "require": "./dist/node/index.cjs",
         "default": "./index.js"
       }
-    }
+    },
+    "./package.json": "./package.json"
   },
+  "type": "module",
   "scripts": {
     "prebuild": "rimraf -rf dist",
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:unit": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:esm": "npm run test --prefix test/module/esm",
+    "test:cjs": "npm run test --prefix test/module/cjs",
+    "test:module": "npm run test:esm && npm run test:cjs", 
+    "test": "npm run test:module && npm run test:unit",
     "tdd": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "cleanup:esm": "rimraf test/module/cjs/node_modules",
+    "cleanup:cjs": "rimraf test/module/esm/node_modules",
+    "cleanup": "npm run cleanup:esm && npm run cleanup:cjs",
+    "posttest:module": "npm run cleanup",
     "build": "rollup -c -m"
   },
   "engines": {
