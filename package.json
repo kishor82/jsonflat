@@ -2,13 +2,25 @@
   "name": "flatten-this-json",
   "version": "1.0.0-beta.1",
   "description": "A lightweight JavaScript library to flatten nested JSON objects into a single-level structure.",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "browser": {
+        "require": "./dist/browser/index.cjs",
+        "default": "./index.js"
+      },
+      "default": {
+        "require": "./dist/node/index.cjs",
+        "default": "./index.js"
+      }
+    }
+  },
   "scripts": {
     "prebuild": "rimraf -rf dist",
-    "build": "babel --out-dir dist --ignore *.test.js src",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-    "tdd": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
+    "tdd": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "build": "rollup -c -m"
   },
   "engines": {
     "node": ">=16"
@@ -37,8 +49,16 @@
     "@babel/cli": "^7.24.1",
     "@babel/core": "^7.24.4",
     "@babel/preset-env": "^7.24.4",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "rollup": "^4.15.0",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-bundle-size": "^1.0.3"
   }
 }
