@@ -1,4 +1,5 @@
-import flattenThisJson from "./lib";
+// Directories are not valid import targets in ESM unless they have an explicit entry point defined.
+import flattenThisJson from "./lib/index.js";
 
 const { flatten } = flattenThisJson;
 
