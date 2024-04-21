@@ -1,4 +1,4 @@
-import { flatten } from '.'; 
+import { flatten } from '../../index.js'; 
 
 describe('flatten', () => {
   // Test case for flattening a simple object
