@@ -31,7 +31,7 @@
     "posttest:module": "npm run cleanup",
     "build": "rollup -c -m",
     "prepare": "husky",
-    "commit": "commit"
+    "cmt": "cz"
   },
   "engines": {
     "node": ">=16"
@@ -62,7 +62,6 @@
     "@babel/preset-env": "^7.24.4",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
-    "@commitlint/prompt-cli": "^19.2.2",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.1.0",
