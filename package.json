@@ -32,7 +32,12 @@
     "build": "rollup -c -m",
     "prepare": "husky",
     "cmt": "cz",
-    "release": "release-it"
+    "release": "release-it",
+    "release:dry": "release-it --dry-run --no-npm",
+    "release:info": "release-it --release-version",
+    "release:beta:no-npm": "release-it --preRelease=beta --no-npm",
+    "release:beta": "release-it --preRelease=beta",
+    "release:no-npm": "release-it --no-npm"
   },
   "engines": {
     "node": ">=16"
