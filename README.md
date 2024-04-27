@@ -1,4 +1,6 @@
-
+[![NPM Version](https://img.shields.io/npm/v/flatten-this-json)](https://www.npmjs.com/package/flatten-this-json)
+[![Build status](https://img.shields.io/github/actions/workflow/status/kishor82/flatten-this-json/unit-tests-cli.yml)](https://github.com/kishor82/flatten-this-json/actions/workflows/unit-tests-cli.yml)
+[![Coverage Status](https://coveralls.io/repos/github/kishor82/flatten-this-json/badge.svg)](https://coveralls.io/github/kishor82/flatten-this-json)
 ---
 
 # flatten-this-json
