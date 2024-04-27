@@ -76,5 +76,8 @@
     "rollup": "^4.15.0",
     "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-bundle-size": "^1.0.3"
-  }
+  },
+  "jsdelivr": "dist/index.min.js",
+  "unpkg": "dist/index.min.js",
+  "sideEffects": false
 }
