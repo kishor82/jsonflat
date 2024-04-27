@@ -31,7 +31,8 @@
     "posttest:module": "npm run cleanup",
     "build": "rollup -c -m",
     "prepare": "husky",
-    "cmt": "cz"
+    "cmt": "cz",
+    "release": "release-it"
   },
   "engines": {
     "node": ">=16"
@@ -62,6 +63,7 @@
     "@babel/preset-env": "^7.24.4",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
+    "@release-it/conventional-changelog": "^8.0.1",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-json": "^6.1.0",
@@ -72,6 +74,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.0.11",
     "jest": "^29.7.0",
+    "release-it": "^17.2.1",
     "rimraf": "^5.0.5",
     "rollup": "^4.15.0",
     "rollup-plugin-auto-external": "^2.0.0",
