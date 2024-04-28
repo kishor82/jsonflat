@@ -1,3 +1,3 @@
-Version 1.0.0-beta1
 
-Initial beta release.
+## [1.0.0-beta1] - 2024-04-14
+
