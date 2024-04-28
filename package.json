@@ -1,6 +1,6 @@
 {
   "name": "flatten-this-json",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "A lightweight JavaScript library to flatten nested JSON objects into a single-level structure.",
   "main": "index.js",
   "exports": {
