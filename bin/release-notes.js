@@ -1,7 +1,5 @@
 import fs from 'fs';
 import readline from 'readline';
-import util from 'util';
-import cp from 'child_process';
 import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
@@ -26,7 +24,7 @@ async function extractReleaseNotes(changelogFile, prerelease) {
     if (match) {
       const version = match[1]; // Extract version number
       if(version === viersionToRelease) {
-        lines.push(`# Release PR for version ${version}`)
+        lines.push(`# Release PR for version ${version}`);
       }
       if (inside_release) {
         break;
