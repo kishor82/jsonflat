@@ -23,7 +23,7 @@
     }
   },
   "hooks": {
-    "before:init": "npm test",
+    "before:init": "npm run test:unit",
     "after:bump": "npm run build",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   }

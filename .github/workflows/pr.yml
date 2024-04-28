@@ -44,9 +44,11 @@ jobs:
       - name: get-npm-version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@main
-      - name: Extract release notes
-        id: extract-release-notes
-        uses: ffurrer2/extract-release-notes@v2
+      - name: Release notes
+        id: release-notes
+        uses: mathiasvr/command-output@v1
+        with:
+          run: npx release-it --changelog
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4
         id: cpr
@@ -57,7 +59,7 @@ jobs:
           title: '[Release] v${{ steps.package-version.outputs.current-version}}'
           body: |
             ## Release notes:
-            ${{ steps.extract-release-notes.outputs.release_notes }}
+            ${{ steps.release-notes.outputs.stdout}}
           labels: |
             release
             automated pr
