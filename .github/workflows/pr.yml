@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 20
           cache: npm
-      - run: npm ci
+      - run: npm ci && npm run build
       - name: Prepare release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
