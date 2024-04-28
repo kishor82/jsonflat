@@ -24,7 +24,7 @@ async function extractReleaseNotes(changelogFile, prerelease) {
     if (match) {
       const version = match[1]; // Extract version number
       if(version === viersionToRelease) {
-        lines.push(`# Release:${version}`);
+        lines.push(`## Release notes:`);
       }
       if (inside_release) {
         break;
