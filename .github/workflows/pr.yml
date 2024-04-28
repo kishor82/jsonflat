@@ -52,6 +52,8 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v4
         id: cpr
+        env:
+          HUSKY: 0 
         with:
           branch: release
           delete-branch: true
