@@ -33,7 +33,7 @@ jobs:
         uses: martinbeentjes/npm-get-version-action@main
       - name: Extract release notes
         id: extract-release-notes
-        uses: ffurrer2/extract-release-notes@v1
+        uses: ffurrer2/extract-release-notes@v2
       ############# TAG RELEASE ##############
       - name: "Push tag v${{ steps.package-version.outputs.current-version }}"
         uses: rickstaa/action-create-tag@v1
