@@ -10,6 +10,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "flatten-this-json": "file:../../.."
+    "jsonflat": "file:../../.."
   }
 }

@@ -1,7 +1,7 @@
-import assert from 'assert';
-import flattenThisJson, {flatten} from "flatten-this-json";
+import assert from "assert";
+import jsonflat, { flat } from "jsonflat";
 
-assert.strictEqual(typeof flattenThisJson.flatten, 'function');
-assert.strictEqual(typeof flatten, 'function');
+assert.strictEqual(typeof jsonflat.flat, "function");
+assert.strictEqual(typeof flat, "function");
 
 console.log("✅ ESM importing test passed");

@@ -1,39 +1,40 @@
-[![NPM Version](https://img.shields.io/npm/v/flatten-this-json)](https://www.npmjs.com/package/flatten-this-json)
-[![Build status](https://img.shields.io/github/actions/workflow/status/kishor82/flatten-this-json/unit-tests-cli.yml)](https://github.com/kishor82/flatten-this-json/actions/workflows/unit-tests-cli.yml)
-[![Coverage Status](https://coveralls.io/repos/github/kishor82/flatten-this-json/badge.svg)](https://coveralls.io/github/kishor82/flatten-this-json)
+[![NPM Version](https://img.shields.io/npm/v/jsonflat)](https://www.npmjs.com/package/jsonflat)
+[![Build status](https://img.shields.io/github/actions/workflow/status/kishor82/jsonflat/unit-tests-cli.yml)](https://github.com/kishor82/jsonflat/actions/workflows/unit-tests-cli.yml)
+[![Coverage Status](https://coveralls.io/repos/github/kishor82/jsonflat/badge.svg)](https://coveralls.io/github/kishor82/jsonflat)
+
 ---
 
-# flatten-this-json
+# jsonflat
 
-`flatten-this-json` is a lightweight Node.js library that flattens nested JSON objects to a single level using customizable delimiters.
+`jsonflat` is a lightweight Node.js library that flattens nested JSON objects to a single level using customizable delimiters.
 
 ## Installation
 
-You can install `flatten-this-json` via npm:
+You can install `jsonflat` via npm:
 
 ```bash
-npm install flatten-this-json
+npm install jsonflat
 ```
 
 ## Usage
 
-To flatten a nested JSON object, import the `flatten` function from `flatten-this-json` and use it as follows:
+To flata nested JSON object, import the `flatten` function from `jsonflat` and use it as follows:
 
 ```javascript
-const { flatten } = require('flatten-this-json');
+const { flat } = require("jsonflat");
 
 const nestedObject = {
   person: {
     name: {
-      first: 'John',
-      last: 'Doe'
+      first: "John",
+      last: "Doe",
     },
     age: 30,
     address: {
-      city: 'New York',
-      state: 'NY'
-    }
-  }
+      city: "New York",
+      state: "NY",
+    },
+  },
 };
 
 const flattenedObject = flatten(nestedObject);
@@ -44,7 +45,7 @@ console.log(flattenedObject);
 The `flatten` function accepts an optional `delimiter` parameter to customize the separator used in the flattened keys:
 
 ```javascript
-const flattenedObject = flatten(nestedObject, '.');
+const flattenedObject = flatten(nestedObject, ".");
 
 console.log(flattenedObject);
 ```
@@ -62,23 +63,23 @@ Returns: A new object with flattened keys.
 
 ## Examples
 
-### Flatten Nested JSON Object
+### flatNested JSON Object
 
 ```javascript
-const { flatten } = require('flatten-this-json');
+const { flat } = require("jsonflat");
 
 const nestedObject = {
   person: {
     name: {
-      first: 'John',
-      last: 'Doe'
+      first: "John",
+      last: "Doe",
     },
     age: 30,
     address: {
-      city: 'New York',
-      state: 'NY'
-    }
-  }
+      city: "New York",
+      state: "NY",
+    },
+  },
 };
 
 const flattenedObject = flatten(nestedObject);
@@ -87,6 +88,7 @@ console.log(flattenedObject);
 ```
 
 Output:
+
 ```json
 {
   "person.name.first": "John",
@@ -100,4 +102,3 @@ Output:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-

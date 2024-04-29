@@ -1,7 +1,7 @@
 {
-  "name": "flatten-this-json",
-  "version": "1.0.0",
-  "description": "A lightweight JavaScript library to flatten nested JSON objects into a single-level structure.",
+  "name": "jsonflat",
+  "version": "0.0.0",
+  "description": "A lightweight JavaScript library to flatnested JSON objects into a single-level structure.",
   "main": "index.js",
   "exports": {
     ".": {
@@ -44,7 +44,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kishor82/flatten-this-json.git"
+    "url": "git+https://github.com/kishor82/jsonflat.git"
   },
   "keywords": [
     "flat-json",
@@ -59,9 +59,9 @@
   "author": "Kishor Rathva",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kishor82/flatten-this-json/issues"
+    "url": "https://github.com/kishor82/jsonflat/issues"
   },
-  "homepage": "https://github.com/kishor82/flatten-this-json#readme",
+  "homepage": "https://github.com/kishor82/jsonflat#readme",
   "devDependencies": {
     "@babel/cli": "^7.24.1",
     "@babel/core": "^7.24.4",
