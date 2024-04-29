@@ -31,9 +31,11 @@ jobs:
       - name: get-npm-version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@main
-      - name: Extract release notes
-        id: extract-release-notes
-        uses: ffurrer2/extract-release-notes@v2
+      - name: Get release notes
+        id: release-notes
+        uses: mathiasvr/command-output@v1
+        with:
+          run: node ./bin/release-notes.js
       ############# TAG RELEASE ##############
       - name: "Push tag v${{ steps.package-version.outputs.current-version }}"
         uses: rickstaa/action-create-tag@v1
@@ -48,7 +50,7 @@ jobs:
           name: "Release v${{ steps.package-version.outputs.current-version }}"
           body: |
             ## Release notes:
-            ${{ steps.extract-release-notes.outputs.release_notes }}
+            ${{ steps.release-notes.outputs.stdout}}
       ############# NPM RELEASE ##############
       - name: Publish the release to NPM
         run: npm publish --provenance --access public
