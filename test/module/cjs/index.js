@@ -1,8 +1,8 @@
-const flattenThisJson = require("flatten-this-json");
-const assert = require('assert');
+const jsonflat = require("jsonflat");
+const assert = require("assert");
 
-const { flatten } = flattenThisJson;
+const { flat } = jsonflat;
 
-assert.strictEqual(typeof flatten, 'function');
+assert.strictEqual(typeof flat, "function");
 
-console.log('✅ CommonJS importing test passed');
+console.log("✅ CommonJS importing test passed");

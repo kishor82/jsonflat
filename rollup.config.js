@@ -64,7 +64,7 @@ const buildConfig = ({
 
 export default async () => {
   const year = new Date().getFullYear();
-  const banner = `// flatten-this-json v${pkg.version} Copyright (c) ${year} ${pkg.author} and contributors`;
+  const banner = `// jsonflat v${pkg.version} Copyright (c) ${year} ${pkg.author} and contributors`;
 
   return [
     // browser ESM bundle for CDN
