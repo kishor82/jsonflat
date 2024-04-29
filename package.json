@@ -1,5 +1,5 @@
 {
-  "name": "jsonflat",
+  "name": "@kishor82/jsonflat",
   "version": "0.0.0",
   "description": "A lightweight JavaScript library to flatnested JSON objects into a single-level structure.",
   "main": "index.js",

@@ -1,4 +1,4 @@
-[![NPM Version](https://img.shields.io/npm/v/jsonflat)](https://www.npmjs.com/package/jsonflat)
+[![NPM Version](https://img.shields.io/npm/v/@kishor82/jsonflat)](https://www.npmjs.com/package/@kishor82/jsonflat)
 [![Build status](https://img.shields.io/github/actions/workflow/status/kishor82/jsonflat/unit-tests-cli.yml)](https://github.com/kishor82/jsonflat/actions/workflows/unit-tests-cli.yml)
 [![Coverage Status](https://coveralls.io/repos/github/kishor82/jsonflat/badge.svg)](https://coveralls.io/github/kishor82/jsonflat)
 
@@ -13,7 +13,7 @@
 You can install `jsonflat` via npm:
 
 ```bash
-npm install jsonflat
+npm install @kishor82/jsonflat
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ npm install jsonflat
 To flata nested JSON object, import the `flat` function from `jsonflat` and use it as follows:
 
 ```javascript
-const { flat } = require("jsonflat");
+const { flat } = require("@kishor82/jsonflat");
 
 const nestedObject = {
   person: {
@@ -66,7 +66,7 @@ Returns: A new object with flattened keys.
 ### flatNested JSON Object
 
 ```javascript
-const { flat } = require("jsonflat");
+const { flat } = require("@kishor82/jsonflat");
 
 const nestedObject = {
   person: {
