@@ -18,7 +18,7 @@ npm install jsonflat
 
 ## Usage
 
-To flata nested JSON object, import the `flatten` function from `jsonflat` and use it as follows:
+To flata nested JSON object, import the `flat` function from `jsonflat` and use it as follows:
 
 ```javascript
 const { flat } = require("jsonflat");
@@ -37,22 +37,22 @@ const nestedObject = {
   },
 };
 
-const flattenedObject = flatten(nestedObject);
+const flattenedObject = flat(nestedObject);
 
 console.log(flattenedObject);
 ```
 
-The `flatten` function accepts an optional `delimiter` parameter to customize the separator used in the flattened keys:
+The `flat` function accepts an optional `delimiter` parameter to customize the separator used in the flattened keys:
 
 ```javascript
-const flattenedObject = flatten(nestedObject, ".");
+const flattenedObject = flat(nestedObject, ".");
 
 console.log(flattenedObject);
 ```
 
 ## API
 
-### `flatten(inputObject, delimiter = '.')`
+### `flat(inputObject, delimiter = '.')`
 
 Flattens the input JSON object to a single level.
 
@@ -82,7 +82,7 @@ const nestedObject = {
   },
 };
 
-const flattenedObject = flatten(nestedObject);
+const flattenedObject = flat(nestedObject);
 
 console.log(flattenedObject);
 ```
