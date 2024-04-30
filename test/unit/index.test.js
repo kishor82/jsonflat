@@ -1,4 +1,4 @@
-import { flat } from "../../index.js";
+import { flat, unflat } from "../../index.js";
 
 describe("flat functon", () => {
   // Test case for flattening a simple object
@@ -81,3 +81,11 @@ describe("flat functon", () => {
     expect(flat(data)).toEqual(expected);
   });
 });
+
+
+describe("unflat functon", () => {
+  it('should have unflat function defined', () => {
+      // Assert that the unflat function is defined
+      expect(unflat).toBeDefined();
+  });
+})
