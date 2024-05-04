@@ -1,0 +1,34 @@
+name: check file changes
+
+on:
+  workflow_call:
+    # Map the workflow outputs to job outputs
+    outputs:
+      changed-ignored:
+        description: "ignored changes"
+        value: ${{ jobs.check-cheanges.outputs.changed-ignored }}
+      
+jobs:
+  check-cheanges:
+    runs-on: ubuntu-latest
+    outputs:
+      changed-ignored: ${{ steps.changed-ignored.outputs.changed-ignored }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v40
+      - name: List all changed files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file was changed"
+          done
+      - name: Check changes
+        id: changed-ignored
+        uses: tj-actions/changed-files@v40
+        with:
+          files: |
+            **.md
+            .github/**
+            bin/**
+
