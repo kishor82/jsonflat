@@ -1,0 +1,33 @@
+name: Reusable workflow example
+
+on:
+  workflow_call:
+    outputs:
+      only_modified: 
+        description: 'ignored files'
+        value: ${{ jobs.check-changes.outputs.changed-ignored }}
+
+jobs:
+  check-changes:
+    runs-on: ubuntu-latest
+    # Map the job outputs to step outputs
+    outputs:
+       changed-ignored: ${{ steps.changed-ignored.outputs.only_modified }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v44
+      - name: List all changed files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file was changed"
+          done
+      - name: Check ignored file changes
+        id: changed-ignored
+        uses: tj-actions/changed-files@v44
+        with:
+          files: |
+            **.md
+            .github/**
+            bin/**
