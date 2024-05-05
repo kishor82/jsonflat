@@ -20,9 +20,12 @@ jobs:
         uses: tj-actions/changed-files@v44
       - name: List all changed files
         run: |
+          echo "📝 Files changed:"
+          echo "----------------"
           for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
-            echo "$file was changed"
+            echo " ✅ $file"
           done
+          echo "----------------"
       - name: Check ignored file changes
         id: changed-ignored
         uses: tj-actions/changed-files@v44
