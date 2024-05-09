@@ -1,5 +1,5 @@
 [![NPM Version](https://img.shields.io/npm/v/@kishor82/jsonflat)](https://www.npmjs.com/package/@kishor82/jsonflat)
-[![Build status](https://img.shields.io/github/actions/workflow/status/kishor82/jsonflat/unit-tests-cli.yml)](https://github.com/kishor82/jsonflat/actions/workflows/unit-tests-cli.yml)
+[![Build status](https://img.shields.io/github/actions/workflow/status/kishor82/jsonflat/ci.yml)](https://github.com/kishor82/jsonflat/actions/workflows/ci.yml)
 [![Coverage Status](https://coveralls.io/repos/github/kishor82/jsonflat/badge.svg)](https://coveralls.io/github/kishor82/jsonflat)
 
 ---
