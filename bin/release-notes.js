@@ -17,7 +17,7 @@ async function extractReleaseNotes(changelogFile, prerelease) {
   const lines = [];
   let inside_release = false;
   for await (const line of rl) {
-    const regex = /^#\s+(\d+\.\d+\.\d+[-\w\d.]*)\s+\((\d{4}-\d{2}-\d{2})\)$/;
+    const regex = /\[?(\d+\.\d+\.\d+-\w+\.\d+)\]?/;
 
     const match = line.match(regex);
 
