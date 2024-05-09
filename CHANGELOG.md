@@ -1,5 +1,7 @@
 # Changelog
 
+# [0.1.0-beta.1](https://github.com/kishor82/jsonflat/compare/v0.1.0-beta.0...v0.1.0-beta.1) (2024-05-09)
+
 # 0.1.0-beta.0 (2024-04-29)
 
 

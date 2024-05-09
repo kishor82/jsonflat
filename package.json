@@ -1,6 +1,6 @@
 {
   "name": "@kishor82/jsonflat",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0-beta.1",
   "description": "A lightweight JavaScript library to flatnested JSON objects into a single-level structure.",
   "main": "index.js",
   "exports": {
