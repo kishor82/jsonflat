@@ -1,4 +1,4 @@
-import { flat } from "../../index.js";
+import { flat, unflat } from "../../index.js";
 
 describe("flat functon", () => {
   // Test case for flattening a simple object
@@ -81,3 +81,37 @@ describe("flat functon", () => {
     expect(flat(data)).toEqual(expected);
   });
 });
+
+
+describe("unflat functon", () => {
+  it('should have unflat function defined', () => {
+      // Assert that the unflat function is defined
+      expect(unflat).toBeDefined();
+  });
+
+    // Test case for unflattening a simple object
+    it("Unflattens a simple object", () => {
+      const data = {
+        name: "John",
+        age: 30,
+        "address.city": "New York",
+        "address.country": "USA",
+      };
+      const expected = {
+        name: "John",
+        age: 30,
+        address: {
+          city: "New York",
+          country: "USA",
+        },
+      };
+      expect(unflat(data)).toEqual(expected);
+    });
+
+  // Test case for unflattening an empty object
+  it("returns an empty object for an empty input", () => {
+    const data = {};
+    const expected = {};
+    expect(unflat(data)).toEqual(expected);
+  });
+})

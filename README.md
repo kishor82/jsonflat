@@ -18,7 +18,7 @@ npm install @kishor82/jsonflat
 
 ## Usage
 
-To flata nested JSON object, import the `flat` function from `jsonflat` and use it as follows:
+To flat nested JSON object, import the `flat` function from `jsonflat` and use it as follows:
 
 ```javascript
 const { flat } = require("@kishor82/jsonflat");
@@ -97,6 +97,44 @@ Output:
   "person.address.city": "New York",
   "person.address.state": "NY"
 }
+```
+
+### nestedObject JSON Object
+
+```javascript
+
+const { unflat } = require("@kishor82/jsonflat");
+
+const flattenedObject = {
+  "person.name.first": "John",
+  "person.name.last": "Doe",
+  "person.age": 30,
+  "person.address.city": "New York",
+  "person.address.state": "NY"
+};
+
+const nestedObject = unflat(flattenedObject);
+
+console.log(nestedObject);
+
+```
+
+Output:
+
+```json
+{
+  person: {
+    name: {
+      first: "John",
+      last: "Doe",
+    },
+    age: 30,
+    address: {
+      city: "New York",
+      state: "NY",
+    },
+  },
+};
 ```
 
 ## License
